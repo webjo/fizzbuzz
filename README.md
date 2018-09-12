@@ -1,4 +1,4 @@
-# fizzbuzz exercice
+# fizzbuzz challenge
 
 1. i using league/route because is very simple and fast router
 
