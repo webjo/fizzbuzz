@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  fizz-buzz-lbc:
+    image: php:7.1-apache
+    restart: always
+    volumes:
+    - ./src:/var/www/html
+    ports:
+    - "9780:80"
