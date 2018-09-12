@@ -29,16 +29,16 @@ class FizzBuzzController
 
         // check parameters
         if (empty($say1) && !is_string($say1)) {
-            return new Response\JsonResponse('say1 is missing');
+            return new Response\JsonResponse('say1 is missing', 400);
         }
         if (empty($int1) && !is_int($int1)) {
-            return new Response\JsonResponse('int1 is missing');
+            return new Response\JsonResponse('int1 is missing', 400);
         }
         if (empty($say2) && !is_string($say2)) {
-            return new Response\JsonResponse('say2 is missing');
+            return new Response\JsonResponse('say2 is missing', 400);
         }
         if (empty($int2) && !is_int($int2)) {
-            return new Response\JsonResponse('int2 is missing');
+            return new Response\JsonResponse('int2 is missing', 400);
         }
 
         // check if limit parameter passed else default value is 100
@@ -62,7 +62,7 @@ class FizzBuzzController
         $data = array_values($result);
 
         // format the response to json
-        $response = new Response\JsonResponse($data);
+        $response = new Response\JsonResponse($data, 200);
 
         // send the response
         return $response;
